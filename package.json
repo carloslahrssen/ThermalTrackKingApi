@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/carloslahrssen/ThermalTrackKingApi/issues"
   },
-  "homepage": "https://github.com/carloslahrssen/ThermalTrackKingApi#readme"
+  "homepage": "https://github.com/carloslahrssen/ThermalTrackKingApi#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "socket.io": "^2.0.4"
+  }
 }
