@@ -9,7 +9,9 @@ app.get('/', function(req, res){
 
 
 io.on('connection', (socket)=>{
-	socket.emit('temp',{temp:data});
+	socket.on('temp', (data)=>{
+		socket.emit('temp-ui', {temp:data.temp});
+	});
 	//socket.emit('heartbeat', {heartbeat:heartbeat});
 	//socket.emit('alert', {alert:alert});
 	socket.on('disconnect', ()=>{
