@@ -9,13 +9,10 @@ app.get('/', function(req, res){
 
 
 io.on('connection', (socket)=>{
-	setInterval(() =>{
-		console.log('a user connected');
-		socket.emit('temp',{temp:'temp'});
-	}, 1000)
+	socket.emit('temp',{temp:data});
 	//socket.emit('heartbeat', {heartbeat:heartbeat});
 	//socket.emit('alert', {alert:alert});
-	socket.on('disconnet', ()=>{
+	socket.on('disconnect', ()=>{
 		console.log('A user disconnected');
 	})
 });
